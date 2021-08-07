@@ -1,0 +1,95 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #0d607a;
+}
+
+.container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container nav .logo {
+  font-size: 3em;
+}
+
+.container nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container nav ul li a {
+  padding: 15px;
+}
+
+.showcase {
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px 25px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.showcase-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.showcase-content img {
+  width: 50%;
+}
+
+.showcase a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.showcase a:hover {
+  color: yellow;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.btn-primary {
+  background-color: #1284a8;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+}
+
+.btn-secondary {
+  background-color: #ff4500;
+}
+
+.btn-secondary:hover {
+  background-color: #992900;
+}
+/*# sourceMappingURL=style.css.map */

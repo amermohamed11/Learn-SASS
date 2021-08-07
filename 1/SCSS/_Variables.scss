@@ -1,0 +1,23 @@
+// variables
+// $primary-color: #ffffff;
+$primary-color: #0d607a;
+$secondary-color: #ff4500;
+$headding-color: white;
+$links-color: $headding-color;
+
+// Fonts
+$body-font: sans-serif;
+@function text-color($color) {
+  @if (lightness($color) >70%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+@function btn-color($color) {
+  @if (darken($color) >70%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
