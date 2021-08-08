@@ -1,3 +1,13 @@
+.my-1 {
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+.my-2 {
+  margin: 20px 0;
+  text-transform: capitalize;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7,7 +17,7 @@
 
 body {
   font-family: sans-serif;
-  background-color: #0d607a;
+  background-color: #131341;
 }
 
 .container nav {
@@ -37,16 +47,33 @@ body {
   padding: 15px;
 }
 
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.btn-primary {
+  background-color: #3636b7;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #ff4500;
+  color: #ffffff;
+}
+
 .showcase {
   width: 90%;
   margin: 0 auto;
-  padding: 15px 25px;
+  padding: 15px 0;
   line-height: 1.6;
-  color: #fff;
+  background-color: #131341;
+  color: #ffffff;
 }
 
 .showcase-content {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,38 +85,72 @@ body {
           align-items: center;
 }
 
+.showcase-content div h1 strong {
+  position: relative;
+}
+
+.showcase-content div h1 strong::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  bottom: -7px;
+  border-radius: 1.5px;
+  background-color: #ff3838;
+  left: 0;
+}
+
 .showcase-content img {
-  width: 50%;
+  max-width: 60%;
+}
+
+.showcase ul li {
+  position: relative;
+}
+
+.showcase ul li:hover::before, .showcase ul li:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.showcase ul li::before {
+  content: "";
+  position: absolute;
+  background-color: crimson;
+  width: 100%;
+  height: 2px;
+  top: -10px;
+  right: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.showcase ul li::after {
+  content: "";
+  position: absolute;
+  background-color: #dcbe14;
+  width: 100%;
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .showcase a {
   text-decoration: none;
-  color: #fff;
-}
-
-.showcase a:hover {
-  color: yellow;
-}
-
-.btn-primary, .btn-secondary {
-  display: inline-block;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.btn-primary {
-  background-color: #1284a8;
-}
-
-.btn-primary:hover {
-  background-color: #fff;
-}
-
-.btn-secondary {
-  background-color: #ff4500;
-}
-
-.btn-secondary:hover {
-  background-color: #992900;
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

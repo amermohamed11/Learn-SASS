@@ -1,23 +1,45 @@
 // variables
-// $primary-color: #ffffff;
-$primary-color: #0d607a;
+$primary-color: rgb(19, 19, 65);
+// $primary-color: #0d607a;
 $secondary-color: #ff4500;
 $headding-color: white;
 $links-color: $headding-color;
-
-// Fonts
+$dark-color: #333333;
+$main-color-beautiful: #ff3838;
+// End variables
+// Start Fonts
 $body-font: sans-serif;
+// End Fonts
 @function text-color($color) {
-  @if (lightness($color) >70%) {
-    @return #000;
+  @if (lightness($color) > 70%) {
+    @return #333333;
   } @else {
-    @return #fff;
+    @return #ffffff;
   }
 }
-@function btn-color($color) {
-  @if (darken($color) >70%) {
-    @return #000;
+// Start primary btn color
+@function primary-btn-color($bg-color-Primary) {
+  @if (lightness($bg-color-Primary) > 70%) {
+    @return darken($color: $primary-color, $amount: 25%);
   } @else {
-    @return #fff;
+    @return lighten($color: $primary-color, $amount: 10%);
+  }
+}
+// End primary btn color
+
+// control in background-color and text color
+@mixin background-color($color) {
+  background-color: $color;
+  color: text-color($color);
+}
+
+// loops
+
+$steps:(1,2);
+
+@each $step in $steps {
+  .my-#{$step}{
+    margin: #{$step*10}px 0;
+    text-transform: capitalize;
   }
 }
